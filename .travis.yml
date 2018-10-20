@@ -11,8 +11,6 @@ before_install:
 
 script:
   - docker build shunk031/mecab-neologd-py3 .
-
-deploy:
   - export TAG=`date +%Y.%m.%d`
   - docker tag shunk031/mecab-neologd-py3 shunk031/mecab-neologd-py3:TAG
   - docker push shunk031/mecab-neologd-py3:TAG
