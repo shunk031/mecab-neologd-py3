@@ -7,7 +7,7 @@ branches:
   - master
   
 before_install:
-  - docker login --username=DOCKER_HUB_USERNAME −−password=DOCKER_HUB_PASSWORD
+  - docker login --username=$DOCKER_HUB_USERNAME −−password=$DOCKER_HUB_PASSWORD
 
 script:
   - docker build shunk031/mecab-neologd-py3 .
