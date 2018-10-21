@@ -10,7 +10,7 @@ before_install:
   - docker login --username=$DOCKER_HUB_USERNAME --password=$DOCKER_HUB_PASSWORD
 
 script:
-  - docker build shunk031/mecab-neologd-py3 .
+  - docker build -t shunk031/mecab-neologd-py3 .
   - export TAG=`date +%Y.%m.%d`
   - docker tag shunk031/mecab-neologd-py3 shunk031/mecab-neologd-py3:TAG
   - docker push shunk031/mecab-neologd-py3:TAG
