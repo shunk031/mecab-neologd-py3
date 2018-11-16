@@ -14,6 +14,7 @@ RUN apt-get -y update && apt-get install -y \
     curl \
     xz-utils \
     file \
+    swig \
     locales \
     && locale-gen ja_JP.UTF-8 \
     && localedef -f UTF-8 -i ja_JP ja_JP \
