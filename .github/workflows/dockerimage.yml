@@ -10,9 +10,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+    - name: Sign in Docker Hub
+      run: docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
     - name: Build and push Docker image
       run: |
-        docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
         docker build -t shunk031/mecab-neologd-py3 .
         export TAG=`date +%Y.%m.%d`
         docker tag shunk031/mecab-neologd-py3 shunk031/mecab-neologd-py3:$TAG
