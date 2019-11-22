@@ -5,4 +5,4 @@
 https://hub.docker.com/r/shunk031/mecab-neologd-py3/
 
 - This dictionary will be updated automatically by using [neologd/mecab-ipadic-neologd](https://github.com/neologd/mecab-ipadic-neologd) latest image.
-- Build image on [Travis CI](https://travis-ci.org/shunk031/mecab-neologd-py3) with daily cron job.
+- Build image on every Tuesday and Friday by [GitHub Actions](https://github.com/shunk031/mecab-neologd-py3/actions?query=workflow%3A%22Docker+Image+CI%22)
